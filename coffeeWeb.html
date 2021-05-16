@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width initial-scale=1.0">
+    <title>coffee shop web</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="coffeeWeb.css">
+    <link rel="stylesheet" href="coffeeshopAnimate.css">
+    <link rel="stylesheet" href="cart.css">
+
+
+</head> 
+<body>
+    <div id="app" >
+        <div class="webhomePage">
+            <nav class="srcoll">
+                <ul>
+                    <li class="Callus" @click="changehome"> <a href="#"> CallUs</a> </li>
+
+                    <li class="Category" @click="changehome" ><a href="#category" >Category</a></li>
+                    <li class="logo" @click="changehome">
+                        <div class="div">
+                            <a href="#home" class="home">
+                                <img src="logo.png" class="logoImg" alt="Home">
+                                </a>
+                        </div>
+                    </li>   
+
+                    <li class="Products" @click="changehome"> <a href="#product">Products</a></li>
+                    <li class="mycart" @click="changePage">Mycart</li>  
+                    <div class="navbar">
+                        <img src="navbar.png" alt="">
+                    </div>
+                </ul>
+                <!-- <div class="selectbar">
+                    <li class="Callus" @click="changehome"> <a href="#"> CallUs</a> </li>
+                    <li class="Category" @click="changehome" ><a href="#category" >Category</a></li>
+                    <li class="div">
+                        <a href="#home" class="home">
+                            <img src="logo.png" class="logoImg" alt="Home">
+                        </a>
+                    </li>
+                    <li class="Products" @click="changehome"> <a href="#product">Products</a></li>
+                    <li class="mycart" @click="changePage">Mycart</li>  
+                </div> -->
+                    
+            </nav>
+        
+            <section id="home" v-if="nowPage=='home'">
+                <div class="homePage">
+                    <div class="imgcontainer">
+                        <img id="homePageImg" src="homepageImh.png" alt="">
+                    </div>
+                    <h2>Welcome come to my shop <br>
+                        Chill ! Chill ! Chill ! </h2>
+                </div>
+            </section>
+            <article v-if="nowPage=='home'">
+                <h2 data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-once="true">About Us</h2>
+                <div class="aboutUePage">   
+                    <div class="intro" >
+                        <h3 data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">SELF</h3>
+                        <p data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true"> 
+                            The most urgent thing at present must be 
+                            to clarify doubts. All in all, as the saying 
+                            goes, mastering the thinking process also masters 
+                            self-introduction.</p>
+                    </div>
+                    <div class="introImg">
+                        <img data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" src="CoffeeBean.png" alt="">
+                    </div>
+                </div>
+            </article>
+            <div class="break" id="category" v-if="nowPage=='home'">
+                <h2 data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-once="true">Category</h2>
+                <div class="smallLogo" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-once="true">
+                    <img src="smallLogo.png" alt="">
+                </div>
+                <p data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-once="true">Learn more about the types of coffee and <br>
+                    choose the best coffee for yourself</p>
+            </div>
+            
+
+            <div class="category" v-if="nowPage=='home'">
+                <div class="column c1">
+                    <div class="item item1">
+                        <img class = "latte" src="Caffe-Latte.png" alt="" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+                        <h3 data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-once="true">Caffe Latta</h3>
+                    </div>
+                    <div class="item item2">
+                        <img class = "Espresso" src="Espresso.png" alt="" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+                        <h3 data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-once="true">Espresso</h3>
+                    </div>
+                </div>
+                <div class="mycup">
+                    <div class="container">
+                        <div class="ingredient">
+                            <div class="espresso">
+                            </div>
+                            <div class="bobble">             
+                            </div>
+                            <div class="milk">
+                            </div>
+                            <div class="water">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column c2">
+                    <div class="item item3">
+                        <img class = "Cuppucino" src="Cuppucino.png" alt="" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+                        <h3 data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-once="true">Cuppucino</h3>
+                    </div>
+                    <div class="item item4">
+                        <img class = "Americano" src="Americano.png" alt="" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+                        <h3 data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-once="true">Amerano</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productSection" id="product" v-if="nowPage=='home'">
+                <div class="bigCircle">
+                    <div>
+                        <img src="smallLogo.png" alt="">
+                    </div>
+                    <h2>Products</h2>
+                </div>
+                <p class="productText" data-aos="fade-left" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-once="true">
+                    The quality of our coffee and coffee beans is quite good. <br> 
+                    If you want to taste good <br>
+                    coffee beans, that is coffee, please come and buy
+                </p>
+                <div class="allproducts" >
+                    <div class="productsContainer"  v-for="cart in carts">
+                        <div class="productCard productCard1" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-once="true">
+                            <div class="product">
+                                <img :src="cart.img" alt="">
+                            </div>
+                            <h2>{{cart.name}}</h2>
+                            <h4>{{cart.type}}</h4>
+                            <p>{{cart.price}}$</p>
+                            <div class="car" >
+                                <img v-on:click="addProductToList(cart)" id="checktobuy1" :src= 'cart.cartPng' alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart">
+                    <button @click="changePage">Mycart</button>
+                </div>
+            </div>
+        <div class="cart" v-if="nowPage == 'cart'">
+            <div class="cartImg">
+                <div class="cartImgcontainer">
+                    <img class="cartPng" src="cartIMG.png" alt="">
+                </div>
+            </div>
+            <div class="cartList">
+                <div class="mycaryTittle">
+                    <h3 >MyCart</h3>
+                </div>
+
+            </div>
+            <div class="cartSession">
+                <div class="items">
+                    <h4 >Name</h4>
+                    <h4 >Quantity</h4>
+                    <h4 >price</h4>
+                </div>
+            </div>
+
+            <div class="goods" v-for="cart in addList">
+                <div class="good" > 
+                    <img :src="cart.img" alt="">
+                    <div class="Quantity"> 
+                        <div class="num">{{cart.number}}</div>
+                        <div class="div">
+                            <div class="plus" @click="addProductNum(cart)">+</div>
+                            <div class="subtraction" @click="deleteProductNum(cart)">-</div>
+                        </div>           
+                    </div>
+                    <div class="a">
+                        <div class="price">{{cart.price*cart.number}}</div>
+                        <div class="delete" >
+                            <img  @click="deleteList(cart) " src="trash.png" alt="">
+                        </div>  
+                    </div>
+                </div>
+                
+            </div>
+            <div class="tottlePrice">
+                <h4>tottle</h4>
+                <div class="allPrice">{{tottlePrice}}$</div>
+            </div>
+            <div class="buybtn">
+                <button id="buy" @click='consoletest'>BUY</button>
+            </div>
+         
+        </div>
+    
+
+
+        <footer id="footer">
+            <div class="contener">
+                <div class="footerImg">
+                    <div>
+                        <img src="smallLogo.png" alt="">
+                    </div>
+                    <h2>Coffee</h2>
+                </div>
+                <div class="col col1">
+                    <div class="footerHeader">Lorem ipsum</div>
+                    <div class="list">
+                        <a href="#">Lorem ipsum</a>
+                        <a href="#">Lorem ipsum</a>
+                        <a href="#">Lorem ipsum</a>
+                        <a href="#">Lorem ipsum</a>
+                    </div>
+                </div>
+                <div class="col col2">
+                    <div class="footerHeader">Lorem ipsum</div>
+                    <div class="list">
+                        <a href="#">Lorem ipsum</a>
+                        <a href="#">Lorem ipsum</a>
+                    </div>
+                </div>
+                <div class="col col3">
+                    <div class="footerHeader">Lorem ipsum</div>
+                    <div class="list">
+                        <a href="#">Lorem ipsum</a>
+                        <a href="#">Lorem ipsum</a>
+                        <a href="#">Lorem ipsum</a>
+                    </div>
+                </div>
+                <div class="col col4">
+                    <div class="footerHeader">Lorem ipsum</div>
+                    <div class="list">
+                        <a href="#">Lorem ipsum</a>
+                        <a href="#">Lorem ipsum</a>
+                        <a href="#">Lorem ipsum</a>
+                        <a href="#">Lorem ipsum</a>
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+        
+    </div>
+
+    
+    
+</body>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="https://unpkg.com/vue@next"></script> 
+    <script src="./buy.js"></script>
+    <script src="coffeeShop.js"></script>
+    
+
+</html>

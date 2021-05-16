@@ -1,0 +1,46 @@
+.Callus:hover{
+    border-bottom: 3px solid #fff;
+
+}
+.Category:hover{
+    border-bottom: 3px solid #fff;
+
+}
+.Products:hover{
+    border-bottom: 3px solid #fff;
+
+}
+.mycart:hover{
+    border-bottom: 3px solid #fff;
+
+}
+.mycart:hover{
+    border-bottom: 3px solid #fff;
+    color: #fff;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: #fff;
+    transition: 0.3s;
+}
+.home:hover{
+    color: #6D4C3D;
+}
+.item1:hover{
+    transform: translateY(-5%);
+ 
+    transition: 0.8s;
+}
+.item2:hover{
+    transform: translateY(-5%);
+    transition: 0.8s;
+}
+.item3:hover{
+    transform: translateY(-5%);
+    transition: 0.8s;
+}
+.item4:hover{
+    transform: translateY(-5%);
+    transition: 0.8s;
+}
