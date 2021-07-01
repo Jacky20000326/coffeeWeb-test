@@ -30,22 +30,34 @@ const Counter = {
                 cartPng: "cart.png"
 
             }], 
-            addList:[],
+            addList:[]
+            
         }
     },
     methods:{
         addProductToList(e){
+            let existItem = false
+            this.addList.map((item)=>{
+                if(item.id === e.id){
+
+                    existItem = true
+                   
+                    window.alert("已經加入了");
+                   
+                    return
+                }
+               
+            })
+            if(!existItem){
+                this.addList.push(e)
+                e.cartPng = "check.png"
+                
+            } 
             
-            e.cartPng = "check.png"
-            this.addList.push(e)
-            console.log(this.addList)
-        
-            // if(this.addList.id == e.id){
-            //     console.log("h1")
-            // }else{
-            //     console.log("h2")
-            // }
-            // this.carts[e].cartPng = "check.png"
+                
+                
+            
+            
         },
         // 切換頁面到cart或是主頁
         changePage(){
@@ -56,7 +68,7 @@ const Counter = {
         },
         deleteList(e){
             this.addList.splice(this.addList.indexOf(e),1);
-            
+            e.cartPng = "cart.png"
             // for(var i = 0;i<this.addList.length;i++){
                 
             //     if(this.addList[i].id == this.carts.id){
